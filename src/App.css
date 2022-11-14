@@ -1,38 +1,96 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #17181f;
+  color: #aaa;
+}
+main {
+  max-width: 400px;
+  margin: 20px auto;
+}
+form {
+  border: 3px solid #30313d;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+}
+form input[type="text"] {
+  background: none;
+  color: #fff;
+  border: 0;
+  padding: 0px 8px;
+  display: block;
+  width: 100%;
+}
+form button {
+  background-color: aquamarine;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+div.task {
+  background-color: #30313d;
+  padding: 5px 9px;
+  border-radius: 10px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.5s linear;
+}
+div.task svg {
+  height: 20px;
+  margin-right: 10px;
+  fill: aquamarine;
+}
+
+div.task.done {
+  opacity: 0.3;
+}
+div.task-name {
+  flex-grow: 1;
+}
+div.task span {
+  position: relative;
+  flex-grow: 1;
+}
+div.task span:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #aaa;
+  position: absolute;
+  top: 13px;
+  transition: width 0.9s linear;
+}
+div.task.done span:before {
+  width: 100%;
+}
+div.checkbox {
+  display: flex;
+  align-items: center;
+}
+div.checkbox {
+  display: flex;
+  align-items: center;
+}
+h2 {
   text-align: center;
 }
+.name {
+  margin: 5px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  /* display: flex; */
+  /* text-align: center; */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button.trash {
+  background: none;
+  border: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button.trash svg {
+  fill: #aaa;
+  height: 14px;
 }
